@@ -1,0 +1,5 @@
+.pytest_cache
+.vscode
+anon.session
+anon.session-journal
+bot.session

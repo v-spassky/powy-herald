@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "powy-herald"
+version = "0.1.0"
+description = "A script to poll a Telegram channel for new messages and send them to a SQS queue."
+authors = ["Me <my@email.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+telethon = "^1.29.2"
+requests = "^2.31.0"
+boto3 = "^1.28.25"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
