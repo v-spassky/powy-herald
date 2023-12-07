@@ -1,7 +1,7 @@
 
 A script to poll a Telegram channel for new messages and send them to a SQS queue.
 
-To run locally:
+#### Running locally with Poetry
 
 ```bash
 poetry shell
@@ -23,7 +23,32 @@ python main.py \
     --access-key 8h89smgNNGne5YFCxjGentLe
 ```
 
-To build and run ith Docker:
+#### Running QA checks
+
+> **Note**
+>
+> These commands are meant to be ran under a Poetry shell after all dependencies
+> (including dev dependencies) have been installed.
+
+Linting:
+
+```bash
+poe lint
+```
+
+Typechecking:
+
+```bash
+poe typecheck
+```
+
+Running all QA checks:
+
+```bash
+poe check-all
+```
+
+#### Running locally with Docker
 
 ```bash
 docker build -t powy-herald .
