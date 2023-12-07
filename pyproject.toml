@@ -19,28 +19,9 @@ poethepoet = "^0.24.4"
 types-requests = "^2.31.0.10"
 wemake-python-styleguide = "^0.18.0"
 
-[tool.mypy]
-allow_redefinition = false
-check_untyped_defs = true
-disallow_untyped_defs = true
-ignore_errors = false
-ignore_missing_imports = true
-implicit_reexport = false
-local_partial_types = true
-no_implicit_optional = true
-no_implicit_reexport = true
-show_error_codes = true
-strict_equality = true
-strict_optional = true
-warn_redundant_casts = true
-warn_unreachable = true
-warn_unused_configs = true
-warn_unused_ignores = true
-python_version = 3.11
-
 [tool.poe.tasks]
-lint = "flake8 main.py"
-typecheck = "mypy main.py"
+lint = "flake8 ./main.py"
+typecheck = "mypy ./main.py"
 check-all = ["lint", "typecheck"]
 
 [build-system]
