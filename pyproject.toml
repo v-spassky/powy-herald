@@ -12,6 +12,34 @@ telethon = "^1.29.2"
 requests = "^2.31.0"
 boto3 = "^1.28.25"
 
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.7.1"
+poethepoet = "^0.24.4"
+types-requests = "^2.31.0.10"
+
+[tool.mypy]
+allow_redefinition = false
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_errors = false
+ignore_missing_imports = true
+implicit_reexport = false
+local_partial_types = true
+no_implicit_optional = true
+no_implicit_reexport = true
+show_error_codes = true
+strict_equality = true
+strict_optional = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+python_version = 3.11
+
+[tool.poe.tasks]
+typecheck = "mypy main.py"
+check-all = ["typecheck"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
